@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
+  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+ <tiles-definitions>  
+  
+   <!-- Base Definition -->
+   <definition name="base-definition" template="/WEB-INF/views/layout/index.jsp">  
+       <put-attribute name="header" value="/WEB-INF/views/layout/header.jsp" />  
+       <put-attribute name="navbar" value="" /> 
+       <put-attribute name="body"   value="" />  
+       <put-attribute name="footer" value="/WEB-INF/views/layout/footer.jsp" />  
+   </definition> 
+   
+   <!-- login Page -->
+   <definition name="loginPage" extends="base-definition">  
+   	   <put-attribute name="navbar" value="" />
+       <put-attribute name="body"   value="/WEB-INF/views/layout/loginPage.jsp" />  
+   </definition>   
+  
+  <!--  Admin Page  -->
+   <definition name="adminPage" extends="base-definition">  
+       <put-attribute name="navbar" value="/WEB-INF/views/layout/navbar.jsp" />   
+       <put-attribute name="body"   value="/WEB-INF/views/layout/adminPage.jsp" />  
+   </definition> 
+ 
+   <!-- Patient Entry Page -->
+   <definition name="patientPage" extends="base-definition">  
+       <put-attribute name="navbar" value="/WEB-INF/views/layout/navbar.jsp" />  
+       <put-attribute name="body"   value="/WEB-INF/views/layout/patientPage.jsp" />  
+   </definition>  
+       
+   <!-- Contact-us Page 
+   <definition name="contactus" extends="base-definition">  
+       <put-attribute name="title" value="Contact Us" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/contactus.jsp" />  
+   </definition>  -->
+  
+</tiles-definitions>      
